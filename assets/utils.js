@@ -5,9 +5,11 @@ async function fetchData(endpoint, method = "GET", secured = false, body = null)
         let requestBody = body;
         let headers = {}
 
-        headers["Content-Type"] = "application/json"; // Set content for JSON    
-        requestBody = JSON.stringify(body); // Convert to a JSON string
-        
+        if (body && typeof body === "object" && !(body instanceof FormData)) { // If not formdata setup JSON
+            headers["Content-Type"] = "application/json"; // Set content for JSON    
+            requestBody = JSON.stringify(body); // Convert to a JSON string
+        }
+
         if (secured) { //Authentify request 
             const token = localStorage.getItem("token"); 
             if (token) {
