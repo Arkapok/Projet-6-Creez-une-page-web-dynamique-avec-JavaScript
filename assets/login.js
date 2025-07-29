@@ -1,7 +1,6 @@
 function login(event) { 
     event.preventDefault();
 
-    console.log("Login button clicked");
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
