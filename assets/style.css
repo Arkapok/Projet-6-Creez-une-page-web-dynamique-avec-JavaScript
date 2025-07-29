@@ -46,7 +46,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/** end reset css**/
+
 body {
 	max-width: 1140px;
 	margin:auto;
@@ -123,9 +123,13 @@ li:hover {
 }
 #portfolio h2 {
 	text-align: center;
-	margin-bottom: 1em;
 }
+#introduction {
+	margin-bottom: 120px;
+}
+
 .gallery {
+	margin-top: 100px;
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
